@@ -1,0 +1,27 @@
+class node:
+    def __init__(self,data):
+        self.data = data
+        self.left = None
+        self.right = None
+def inorder(root):
+    if not root:
+        return
+    stack = []
+    res = []
+    stack.append(root)
+    while stack:
+        node = stack.pop()
+        res.append(node.data)
+        if node.left is not None:
+            stack.append(node.left)
+        if node.right is not None:
+            stack.append(node.right)
+    return res
+root = node(1)
+root.left = node(2)
+root.right = node(3)
+root.left.left = node(4)
+root.left.right = node(5)
+root.right.right = node(6)
+root.right.left = node(7)
+print(inorder(root))
