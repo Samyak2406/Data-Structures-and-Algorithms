@@ -2,7 +2,7 @@
  * 
  * @author Het Daftary
  * This file has the C++ implementation of Split and join functions of Python.
- * Uses arrays. 
+ * Uses String arrays.
  */
 
 #include <iostream>
