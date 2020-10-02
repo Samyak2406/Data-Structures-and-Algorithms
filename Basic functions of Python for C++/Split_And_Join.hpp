@@ -1,9 +1,8 @@
 /**
  * 
  * @author Het Daftary
- * @version 2.0
- * @GitHub "https://github.com/HetDaftary/CSV_in_different_langauges"
- * This file has the split and join functions for using with CSV. 
+ * This file has the C++ implementation of Split and join functions of Python.
+ * Uses arrays. 
  */
 
 #include <iostream>
