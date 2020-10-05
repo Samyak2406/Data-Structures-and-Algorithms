@@ -1,18 +1,21 @@
 import java.util.*;
+
+
+
 class Main
 {
     static int top = -1;
     static int size;
     static void push(int[] a)
     {
-        Scanner in = new Scanner(System.in);
+        Reader.init(System.in);
         if(top == size-1)
         {
             System.out.println("Stack Overflow");
             return;
         }
         System.out.print("Enter the number to be added in the Stack:   ");
-        int num = in.nextInt();
+        int num = Reader.nextInt();
         top++;
         a[top] = num;
     }
@@ -40,10 +43,10 @@ class Main
     }
     public static void main (String[]args)
     {
-        Scanner sc = new Scanner(System.in);
+        Reader.init(System.in);
 	    System.out.println ("----------STACK----------");
         System.out.print("Enter the size of the array :    ");
-        size = sc.nextInt();
+        size = Reader.nextInt();
         int[] stack = new int[size];
         int n;
         do {
