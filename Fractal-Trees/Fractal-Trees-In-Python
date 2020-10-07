@@ -1,0 +1,23 @@
+import turtle
+
+arrow = turtle.Turtle()
+arrow.screen.bgcolor("black") #screen background color
+arrow.goto(0,-300) #initial position of turtle
+arrow.left(90) #since initialy turtle is at 90 degree right.
+arrow.speed('fastest') #spped of the process
+
+def tree(i):
+    if i<10: #condition when to break recursion
+        return
+    else:
+        arrow.color("green") #color of the design
+        arrow.forward(i) # moves forward by i units
+        arrow.left(30) # makes a 30 degree turn
+        tree(0.72*i) # decreases i value by a factor of 3/4
+        arrow.right(60) # changes to 60 degree right (double the angle above and also in order to make it retrace the path)
+        tree(0.72*i) # decreases i value by a factor of 3/4
+        arrow.left(30) # changes to 30 degree left (in order to make it retrace the path)
+        arrow.color("white") # changing color again
+        arrow.backward(i) #tracing back
+        
+tree(130) # giving i its value
